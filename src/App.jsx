@@ -129,7 +129,7 @@ function App() {
 
   const handleCopyEmail = (e) => {
     e.preventDefault();
-    navigator.clipboard.writeText('drewgamer681@gmail.com').then(() => {
+    navigator.clipboard.writeText('drey.e.aymituma@gmail.com').then(() => {
       setEmailCopied(true);
       setTimeout(() => {
         setEmailCopied(false);
@@ -364,7 +364,7 @@ function App() {
         </section>
 
         {/* Projects Section (Catalog) */}
-        <section id="proyectos" class="projects section-scroll">
+        <section id="proyectos" className="projects section-scroll">
           <h2 className="section-title">Proyectos</h2>
           <p className="section-subtitle">Diseños y desarrollos interactivos listos para explorar. Haz clic en "Probar Demo" para abrirlos directamente.</p>
 
@@ -430,32 +430,31 @@ function App() {
               </div>
             </article>
 
-            {/* Project Card 3 (Placeholder: Neo-Sisol Dashboard) */}
+            {/* Project Card 3 (WorkStation BackOffice Suite) */}
             <article className="project-card">
               <div className="project-image-container">
-                <div className="project-placeholder-img">
-                  <i className="fa-solid fa-heart-pulse placeholder-icon"></i>
-                </div>
+                <img src={`${import.meta.env.BASE_URL}imagenes/workstation_backoffice.png`} alt="Vista previa WorkStation BackOffice Suite" className="project-img" />
                 <div className="project-overlay">
-                  <span className="project-badge">Desarrollo</span>
+                  <span className="project-badge">En Producción</span>
                 </div>
               </div>
               <div className="project-details">
                 <div className="project-tags">
-                  <span>React</span>
-                  <span>CSS Grid</span>
-                  <span>Mock API</span>
+                  <span>JavaScript ES6+</span>
+                  <span>CSS Grid / Flexbox</span>
+                  <span>LocalStorage API</span>
+                  <span>SPA</span>
                 </div>
-                <h3 class="project-name">Dashboard Médico Neo-Sisol</h3>
+                <h3 className="project-name">Sistema de Automatización Operativa &amp; Diagnóstico (WorkStation)</h3>
                 <p className="project-desc">
-                  Interfaz web interactiva para la reserva y consulta de citas médicas, con simulación de inicio de sesión y base de datos local mockeada.
+                  Plataforma web SPA para optimización de procesos técnicos, diagnóstico de red y generación automatizada de plantillas.
                 </p>
                 <div className="project-links">
-                  <a href="#" className="btn-catalog btn-demo disabled-link" onClick={e => e.preventDefault()}>
-                    <i className="fa-solid fa-lock"></i> Próximamente
+                  <a href="https://dreyeles.github.io/backoffice-workstation/" className="btn-catalog btn-demo" target="_blank" rel="noopener noreferrer">
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i> Probar Demo
                   </a>
-                  <a href="#" className="btn-catalog btn-repo disabled-link" onClick={e => e.preventDefault()}>
-                    <i className="fa-brands fa-github"></i> Código
+                  <a href="https://github.com/Dreyeles/backoffice-workstation" className="btn-catalog btn-repo" target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-github"></i> Ver GitHub
                   </a>
                 </div>
               </div>
@@ -464,7 +463,7 @@ function App() {
         </section>
 
         {/* Contact Section */}
-        <section id="contacto" class="contact section-scroll">
+        <section id="contacto" className="contact section-scroll">
           <h2 className="section-title">Hablemos</h2>
           <p className="section-subtitle">¿Tienes un proyecto en mente o una propuesta laboral? Estaré encantado de conversar contigo.</p>
 
@@ -476,7 +475,7 @@ function App() {
 
               <div className="contact-links-list">
                 <a
-                  href="mailto:drewgamer681@gmail.com"
+                  href="mailto:drey.e.aymituma@gmail.com"
                   className="contact-item-card"
                   onClick={handleCopyEmail}
                 >
@@ -485,7 +484,7 @@ function App() {
                   </div>
                   <div className="contact-item-text">
                     <span>{emailCopied ? '¡Copiado al portapapeles!' : 'Clic para copiar correo'}</span>
-                    <strong>Drewgamer681@gmail.com</strong>
+                    <strong>drey.e.aymituma@gmail.com</strong>
                   </div>
                 </a>
 

@@ -45,6 +45,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -54,6 +55,7 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+  width: 100%;
 }
 
 /* Enlaces y Botones Genéricos */
@@ -91,6 +93,18 @@ img {
   background: radial-gradient(circle, #8b5cf6 0%, transparent 70%);
   bottom: -10%;
   left: -5%;
+}
+
+/* Evitar que los glows causen overflow en móviles */
+@media (max-width: 768px) {
+  .glow-bg-1 {
+    right: 0;
+    width: 60vw;
+  }
+  .glow-bg-2 {
+    left: 0;
+    width: 60vw;
+  }
 }
 
 /* ==========================================================================
@@ -810,6 +824,9 @@ section {
   color: var(--text-primary);
   font-size: 1rem;
   transition: var(--transition-smooth);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .form-group input:focus, .form-group textarea:focus {
@@ -930,6 +947,8 @@ section {
 @media (max-width: 768px) {
   section {
     padding-top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .hero-title {
@@ -940,8 +959,40 @@ section {
     font-size: 1.4rem;
   }
 
+  .hero-actions {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+    max-width: calc(100% - 55px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .nav-container {
+    padding: 0.85rem 1rem;
+  }
+
   .nav-toggle {
     display: block;
+    flex-shrink: 0;
+  }
+
+  .project-details {
+    padding: 1.5rem;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .project-links .btn-catalog {
+    flex: 1 1 130px;
+    text-align: center;
   }
 
   .nav-menu {
@@ -977,9 +1028,26 @@ section {
     height: 220px;
   }
 
+  .about-container {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
   .footer-container {
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
+  }
+
+  .social-socials-group {
+    align-items: center;
     text-align: center;
   }
 }
